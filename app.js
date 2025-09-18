@@ -1,27 +1,52 @@
-// // console.log("Hello");
-// // const sayHello=()=>{
+// // // console.log("Hello");
+// // // const sayHello=()=>{
 
-// //     console.log("Hello");
+// // //     console.log("Hello");
+// // // }
+// // // sayHello();
+// // //console.log(module);
+// // const url="http://mylogger.io/log";
+// // const log=(message)=>{
+    
+// //     console.log(message);
 // // }
-// // sayHello();
-// //console.log(module);
+
+// // // module.exports.URL=url;
+// // // module.exports.log=log;
+
+// // //module.exports={url,log};
+// // module.exports=url;
+// // module.exports=log;
+
 // const url="http://mylogger.io/log";
+// module.exports=url;
 // const log=(message)=>{
     
 //     console.log(message);
 // }
+// module.exports={log,url};
 
-// // module.exports.URL=url;
-// // module.exports.log=log;
+// const logger=require("./logger");
+// // const EventEmitter = require('events');
+// // const emitter = new EventEmitter();
+// // emitter.on("LogDone",()=>{
+// //     console.log("Listener Called");
+// // });
+// logger.emitter.on("LogDone",()=>{
+//     console.log("Listener Called");
+// });
 
-// //module.exports={url,log};
-// module.exports=url;
-// module.exports=log;
+// logger.log();
 
-const url="http://mylogger.io/log";
-module.exports=url;
-const log=(message)=>{
-    
-    console.log(message);
-}
-module.exports={log,url};
+// const Logger=require("./logger");
+// const logger=new Logger();
+// logger.on("LogDone",()=>{
+//     console.log("Listener Called");
+// });
+// logger.log();
+const logger=require("./logger");
+//const logger=new Logger();
+logger.on("LogDone",()=>{
+    console.log("Listener Called");
+});
+logger.log();
